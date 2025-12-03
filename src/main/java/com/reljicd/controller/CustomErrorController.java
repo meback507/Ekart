@@ -5,15 +5,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+string a="/error";
 
 @RestController
 public class CustomErrorController implements ErrorController {
 
-    private static final String PATH = "/error";
+    private static final String PATH =a ;
 
     @RequestMapping(PATH)
     public ModelAndView error() {
-        return new ModelAndView("/error");
+        return new ModelAndView(a);
     }
 
     @GetMapping("/403")
